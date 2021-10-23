@@ -43,7 +43,7 @@ const App = () => {
                 <AuthApp onSignIn={handleSignIn} />
               </Route>
               <Route path='/dashboard'>
-                {!isSignedIn ? <Redirect /> : <DashboardApp />}
+                {!isSignedIn ? <Redirect to='/' /> : <DashboardApp />}
               </Route>
               <Route path='/' component={MarketingApp} />
             </Switch>
